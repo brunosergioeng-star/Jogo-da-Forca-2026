@@ -1,6 +1,9 @@
 # JOGO DA FORCA
-##Projeto
-Desenvolvido durante o curso Back-End da Academia do Programador 2026
+
+![Jogo da forca interativo com o usuário que roda em terrminal](./.docs/JogoDaForca.gif)
+
+## Projeto
+Desenvolvido durante o curso Back-End da [Academia do Programador](https://www.academiadoprogramador.net/inicio) 2026.
 
 ## Introdução
 O computador escolherá, de maneira aleatória, uma palavra entre várias possibilidades*, e o jogador deve chutar, letra por letra, até adivinhá-la.

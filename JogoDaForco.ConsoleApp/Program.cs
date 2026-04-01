@@ -34,7 +34,7 @@ string[] palavras = [
                 "UVAIA"
                 ];
 
-int indiceAleatorio = RandomNumberGenerator.GetInt32(palavras.Length);
+int indiceAleatorio = RandomNumberGenerator.GetInt32(palavras.Length + 1);
 
 string palavraAleatoria = palavras[indiceAleatorio];
 
@@ -64,6 +64,8 @@ while (true)
     {
         Console.Write(letrasCorretas[contadorLetras]);
     }
+
+    Console.WriteLine();
 
     if (contadorErros == 0)
     {
@@ -152,7 +154,17 @@ while (true)
 
     Console.WriteLine("\n---------------------------------------");
 
-    Console.WriteLine("\n----------------------------");
+    if (jogadorAcertou)
+    {
+        Console.WriteLine($"Parabéns, você acertou! A palavra era: {palavraAleatoria}");
+        break;
+    }
+    else if (jogadorPerdeu)
+    {
+        Console.WriteLine($"GAME OVER! A palavra era: {palavraAleatoria}");
+        break;
+    }
+
     Console.WriteLine("Digite uma letra: ");
     char chute = Convert.ToChar(Console.ReadLine());
 
@@ -175,18 +187,15 @@ while (true)
     string letrasCorretasCompleta = string.Join("", letrasCorretas);
 
     if (palavraAleatoria == letrasCorretasCompleta)
-    {
-        Console.WriteLine($"Parabéns você acertou!");
         jogadorAcertou = true;
-    }
+
 
     if (contadorErros > 5)
-    {
-        Console.WriteLine($"Game Over! A palavra era: {palavraAleatoria}");
         jogadorPerdeu = true;
-        break;
-    }
+
+
 }
 
+Console.WriteLine("--------------------------------------");
 Console.WriteLine("Pressione ENTER para sair...");
 Console.ReadLine();
