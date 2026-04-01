@@ -35,7 +35,6 @@ string[] palavras = [
                 ];
 
 int indiceAleatorio = RandomNumberGenerator.GetInt32(palavras.Length + 1);
-
 string palavraAleatoria = palavras[indiceAleatorio];
 
 char[] letrasCorretas = new char[palavraAleatoria.Length];
